@@ -1,0 +1,16 @@
+"""Simple Fibonacci module."""
+
+def fibonacci(n: int) -> int:
+    """Return the nth Fibonacci number using iterative approach.
+
+    Parameters
+    ----------
+    n: int
+        Index of Fibonacci number, must be non-negative.
+    """
+    if n < 0:
+        raise ValueError("n must be non-negative")
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
